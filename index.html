@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>David Nkpa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="David Nkpa. Computer Science graduate (First-Class, University of Leicester), based in London. Builds things between AI, finance and data.">
+<meta property="og:title" content="David Nkpa">
+<meta property="og:description" content="Computer Science graduate in London. Builds things between AI, finance and data.">
+<meta property="og:image" content="assets/img/avatar.jpg">
+<link rel="icon" href="assets/img/avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="styles.css?v=5">
+<script>
+  try { var t = localStorage.getItem('dn-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#app">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#home" aria-label="David Nkpa, home">
+      <img src="assets/img/avatar.jpg" alt="" width="32" height="32">
+      <span>David Nkpa</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#about" data-route="about">About</a>
+      <a href="#projects" data-route="projects">Projects</a>
+      <a href="#resume" data-route="resume">Resume</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch colour theme">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="btn-dark" id="talkBtn" type="button">Let's Talk</button>
+    </div>
+  </div>
+</header>
+
+<main id="app" tabindex="-1"></main>
+
+<footer class="wrap footer">
+  <div class="footer-bar">
+    <div class="footer-mail">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      <span class="sel">dcnkpa@gmail.com</span>
+      <button class="copy" type="button" data-copy="dcnkpa@gmail.com">Copy</button>
+    </div>
+    <div class="socials">
+      <a href="https://github.com/daveck11" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17.3 4.4 18.3 4.7 18.3 4.7c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/david-nkpa-578712290" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5z"/></svg>
+      </a>
+    </div>
+  </div>
+  <p class="footer-note">© 2026 David Nkpa · London</p>
+</footer>
+
+<div class="modal" id="talk" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="talkTitle">
+    <button class="modal-x" type="button" data-close aria-label="Close">×</button>
+    <p class="eyebrow">Let's talk</p>
+    <h2 id="talkTitle">Hiring, building something, or just curious?</h2>
+    <p class="muted">Email is the quickest way to reach me. I reply within a day.</p>
+    <div class="talk-row">
+      <span class="sel talk-mail">dcnkpa@gmail.com</span>
+      <button class="btn-dark" type="button" data-copy="dcnkpa@gmail.com">Copy email</button>
+    </div>
+    <div class="talk-links">
+      <a href="mailto:dcnkpa@gmail.com">Open in mail app ↗</a>
+      <a href="https://www.linkedin.com/in/david-nkpa-578712290" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/daveck11" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="app.js?v=5"></script>
+</body>
+</html>
