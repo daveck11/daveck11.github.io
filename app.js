@@ -122,11 +122,6 @@
     }
   ];
 
-  const SMALL_BUILDS = [
-    { name: 'Idea Sprint', href: 'https://idea-sprint-zeta.vercel.app', text: 'Dump an idea by typing or talking, give it a deadline, and it breaks it into three tasks.' },
-    { name: 'Hub', href: 'https://hubproject-ruby.vercel.app', text: "One place for everything I'm trying to move forward. Topics, tasks, logged progress and streaks." }
-  ];
-
   const ROLES = [
     { logo: 'rolls-royce.png', mono: 'RR', color: '#1f2a44', title: 'Finance Analyst', co: 'Rolls-Royce', place: 'London', when: 'Apr 2026 – Jun 2026',
       text: 'Pulled a messy 12-month cost dataset (six months of actuals, six of forecasts) into something management could actually read. Built the Excel model behind it, then boiled the whole thing down to a 5-slide exec deck with three clear recommendations.' },
@@ -233,20 +228,6 @@
       </div></a>`;
   }
 
-  function smallBuildsCard() {
-    return `<div class="card" style="cursor:default">
-      <div class="card-media" style="background:var(--bg-tile);align-content:center;padding:20px">
-        <div class="mini-list" style="width:100%;background:var(--bg)">
-          ${SMALL_BUILDS.map((b) => `<a class="mini" href="${b.href}"${ext(b.href)}><span class="mono" style="background:#3a3f4b">${b.name[0]}</span><div><h4>${esc(b.name)}</h4><p>${esc(b.text)}</p></div><span class="go">Open ↗</span></a>`).join('')}
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-title">${mono('+', '#6c7180')}<span>Small things I built for myself</span></div>
-        <p>Weekend tools I use. Both live on Vercel.</p>
-        <div class="card-meta"><span class="tag">Side builds</span><span class="tag">2026</span></div>
-      </div></div>`;
-  }
-
   function hackCard(wide) {
     const p = PROJECTS[1];
     return `<article class="hack" ${wide ? 'style="grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)"' : ''}>
@@ -287,7 +268,7 @@
         </div>
         <div class="cards">${PROJECTS.slice(0, 4).map(projectCard).join('')}</div>
         <a class="explore" href="#projects">
-          <div><h3>Explore all projects</h3><p>The cloud setup, side builds and the full write-ups.</p></div>
+          <div><h3>Explore all projects</h3><p>The cloud setup and the full write-ups.</p></div>
           <span class="btn-light">View all ${arrowSvg.replace('<svg', '<svg width="14" height="14" style="fill:none;stroke:currentColor;stroke-width:2"')}</span>
         </a>
       </section>
@@ -295,10 +276,10 @@
       <section class="wrap">
         <div class="center-head">
           <span class="pill"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>Built in about a day</span>
-          <h2>Hackathons &amp; side builds</h2>
-          <p>Coding under pressure, and the small tools I use every week.</p>
+          <h2>Hackathons</h2>
+          <p>Coding under pressure, then pitching it to the judges.</p>
         </div>
-        <div class="hacks">${hackCard(false)}${smallBuildsCard()}</div>
+        <div class="hacks" style="grid-template-columns:1fr">${hackCard(true)}</div>
       </section>
     </div>`;
   }
@@ -391,7 +372,7 @@
           <h2>Featured Work</h2>
           <p>Click any project for the full story, pictures and code.</p>
         </div>
-        <div class="cards">${PROJECTS.map(projectCard).join('')}${smallBuildsCard()}</div>
+        <div class="cards">${PROJECTS.map(projectCard).join('')}</div>
       </section>
       <section class="wrap">
         <div class="center-head">
