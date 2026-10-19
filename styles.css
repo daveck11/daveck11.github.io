@@ -305,6 +305,7 @@ figure { margin: 0; }
 .roles { display: grid; gap: 28px; }
 .role { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 14px; }
 .role .mono { width: 40px; height: 40px; border-radius: 10px; font-size: 13px; }
+.role .logo { width: 40px; height: 40px; border-radius: 10px; object-fit: cover; border: 1px solid var(--line); background: #ffffff; }
 .role h3 { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; }
 .role .co { font-size: 14.5px; color: var(--fg-2); }
 .role .when { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }

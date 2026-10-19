@@ -64,15 +64,23 @@
       mono: 'Fi', color: '#15803d', tint: 't-fin',
       tag: 'Final-year project',
       when: 'Sep 2025 – May 2026',
-      stack: 'Python, FastAPI, Pandas, NumPy, Claude + OpenAI',
-      result: 'Plain-English stock comparisons',
+      stack: 'Python, FastAPI, React, PostgreSQL, GPT-4o (RAG)',
+      result: '55-stock universe, 4 risk clusters',
       short: 'Helps everyday investors understand US stocks (volatility, drawdown, risk vs return) without needing a finance degree.',
-      card: { type: 'mock-fin' },
-      prose: [
-        "My final-year project. A full-stack web app that helps everyday investors actually understand US stocks: volatility, drawdown, risk vs return, without needing a finance degree to read it.",
-        "The backend is a Python/FastAPI service that pulls in market data and crunches the indicators with Pandas and NumPy. On top of that I built an agentic LLM layer (Claude + OpenAI) that turns the raw numbers into plain-English comparisons you can act on. I spent a lot of the time making sure it stays grounded and doesn't just make things up."
+      card: { type: 'photo', src: 'spectra-analysis.png', alt: 'Spectra stock analysis screen for NVDA with price, moving averages, trend and returns' },
+      media: [
+        { src: 'spectra-analysis.png', alt: 'Stock Analysis: price and moving averages, trend in plain words, recent returns', dark: true },
+        { src: 'spectra-score.png', alt: 'Compare against the S&P 500, risk snapshot, composite score and evaluation matrix', dark: true },
+        { src: 'spectra-assistant.png', alt: 'AI Assistant explaining what the composite score means for a stock', dark: true },
+        { src: 'spectra-dashboard.png', alt: 'Dashboard with watchlist cluster breakdown and returns', dark: true }
       ],
-      mediaNote: 'The picture above is an illustration of the layout, not real output.',
+      prose: [
+        "My final-year project, called Spectra. A full-stack web app that helps everyday investors actually understand US stocks: volatility, drawdown, risk vs return, without needing a finance degree to read it.",
+        "The backend is a Python/FastAPI service that pulls in market data and crunches the indicators with Pandas and NumPy. On top of that I built an agentic LLM layer that turns the raw numbers into plain-English comparisons you can act on. I spent a lot of the time making sure it stays grounded and doesn't just make things up.",
+        "Every user gets a risk profile, from conservative to aggressive, and the 55 stocks in the universe are grouped into four clusters with K-Means (stable and defensive up to high risk). The assistant uses retrieval to pull examples that match both your risk band and the stock's cluster before GPT-4o writes anything. It also has hard rules: no buy or sell calls, no predictions, and it says so when it doesn't have the data.",
+        "React on the front, FastAPI and PostgreSQL behind it, market data from Twelve Data."
+      ],
+      mediaNote: 'Screenshots from the dissertation build, April 2026.',
       links: [{ label: 'Code on request, just email me', href: 'mailto:' + EMAIL }]
     },
     {
@@ -84,8 +92,11 @@
       stack: 'Python, Pandas, scikit-learn, K-Means, MapReduce',
       result: '0.934 R² on the test set',
       short: '1.1M+ Met Police crime records rolled into 56,571 neighbourhood-months. Random Forest landed at 0.934 R².',
-      card: { type: 'img', src: 'crime-feature-importance.png', alt: 'Feature importance chart from the crime model', white: true },
-      media: [{ src: 'crime-feature-importance.png', alt: 'Feature importance: previous month crime count is the strongest predictor', white: true }],
+      card: { type: 'img', src: 'crime-london-map.png', alt: 'Map of crime counts across London neighbourhoods', white: true },
+      media: [
+        { src: 'crime-london-map.png', alt: 'Geographic crime distribution across London, darker points mean more crime', white: true },
+        { src: 'crime-clusters-map.png', alt: 'London neighbourhoods coloured by K-Means cluster (k=4)', white: true }
+      ],
       prose: [
         "Took 1.1 million+ Met Police crime records and built a pipeline that cleans and rolls them up into about 56,000 neighbourhood-month rows. I engineered the features myself (lagged crime counts, crime-type ratios, even Shannon entropy) and was careful about leakage with proper time-based splits.",
         "Random Forest landed at 0.934 R² on the test set. Turns out last month's crime count is by far the best predictor of next month's. I also clustered neighbourhoods with K-Means and ran the heavy processing MapReduce-style."
@@ -117,12 +128,14 @@
   ];
 
   const ROLES = [
-    { mono: 'RR', color: '#1f2a44', title: 'Finance Analyst', co: 'Rolls-Royce', place: 'London', when: 'Apr 2026 – Jun 2026',
+    { logo: 'rolls-royce.png', mono: 'RR', color: '#1f2a44', title: 'Finance Analyst', co: 'Rolls-Royce', place: 'London', when: 'Apr 2026 – Jun 2026',
       text: 'Pulled a messy 12-month cost dataset (six months of actuals, six of forecasts) into something management could actually read. Built the Excel model behind it, then boiled the whole thing down to a 5-slide exec deck with three clear recommendations.' },
-    { mono: 'B', color: '#111318', title: 'Software Engineering Intern', co: 'Boom Technologies · Fintech', place: 'London', when: 'Sep 2025 – Oct 2025',
+    { logo: 'boom.png', mono: 'B', color: '#111318', title: 'Software Engineering Intern', co: 'Boom Technologies · Fintech', place: 'London', when: 'Sep 2025 – Oct 2025',
       text: "Shipped 10+ admin analytics features into a React back-office system so the team could see what was going on and make faster calls. Also wrote a CEO-ready report on which LLMs to use and how to think about sustainable data-centre setups, written for people who aren't technical." },
-    { mono: 'S&G', color: '#4a5468', title: 'Strategy Consultant Intern', co: 'S&G Strategy', place: 'Montreal', when: 'Jul 2024 – Aug 2024',
-      text: "Researched 40+ transport providers to map out the market: pricing, positioning, who's actually winning. Compared leverage and liquidity against operating performance to back up the commercial recommendations." }
+    { mono: '181', color: '#3b4252', title: 'Research Intern', co: '181st Street Communications', place: 'London (remote)', when: 'Jun 2025 – Jul 2025',
+      text: 'Built website prototypes around the user journey, then set up the analytics to see where people actually dropped off. The changes we tested lifted sign-up conversion by 12% on the test pages. I also turned the research into plain recommendations and test plans for people who are not technical.' },
+    { logo: 'ecobank.png', mono: 'E', color: '#005f8f', title: 'IT Intern', co: 'Ecobank Transnational Inc.', place: 'Lomé, Togo', when: 'Jul 2022 – Aug 2022',
+      text: 'My first look at tech inside a bank. I supported the SWIFT payment systems and the anti-money-laundering tools, and fixed 30+ priority network incidents while following strict escalation and audit rules. Learned quickly how much logging and sign-off sits behind every change in a regulated place.' }
   ];
 
   const SKILLS = [
@@ -348,14 +361,14 @@
         <h2 class="eyebrow">Experience</h2>
         <div class="exp">
           <div class="roles">
-            ${ROLES.map((r) => `<div class="role">${mono(r.mono, r.color)}<div>
+            ${ROLES.map((r) => `<div class="role">${r.logo ? `<img class="logo" src="${IMG}logos/${r.logo}" alt="${esc(r.co)} logo" width="40" height="40">` : mono(r.mono, r.color)}<div>
               <h3>${esc(r.title)}</h3><div class="co">${esc(r.co)} · ${esc(r.place)}</div><div class="when">${esc(r.when)}</div>
               <p>${esc(r.text)}</p></div></div>`).join('')}
           </div>
           <div class="mosaic">
-            <figure><img src="${IMG}boom.jpg" alt="Boom Technologies on the Nasdaq screen" loading="lazy"><figcaption>Boom Technologies</figcaption></figure>
+            <figure><img src="${IMG}spectra-analysis.png" alt="Spectra stock analysis screen" loading="lazy"><figcaption>Spectra (final-year project)</figcaption></figure>
             <figure class="fit dark"><img src="${IMG}agenclave-loop.png" alt="Agenclave trust loop" loading="lazy"><figcaption>Agenclave</figcaption></figure>
-            <figure class="fit"><img src="${IMG}crime-feature-importance.png" alt="Crime model feature importance" loading="lazy"><figcaption>Crime model</figcaption></figure>
+            <figure class="fit"><img src="${IMG}crime-london-map.png" alt="London crime map" loading="lazy"><figcaption>London crime map</figcaption></figure>
             <figure><img src="${IMG}hackathon-pitch.jpg" alt="Pitching at Imperial" loading="lazy"><figcaption>UKFinnovator pitch</figcaption></figure>
           </div>
         </div>
@@ -444,8 +457,10 @@
         ${li(['Consolidated a 12-month cost dataset, combining 6 months of actuals and forecasts into clean analysis for management review.', 'Built an Excel model calculating monthly % variances, cumulative spend movement, run-rate trends and forecast accuracy across departmental cost lines.', 'Converted the analysis into a 5-slide executive deck with charts and plain-language commentary supporting 3 recommended actions.'])}
         ${row('Software Engineering Intern', 'Sep 2025 – Oct 2025', 'Boom Technologies (Fintech)', 'London, UK')}
         ${li(['Built 10+ admin analytics features in a React back-office system, improving operational data visibility and enabling faster decisions.', 'Authored a CEO-ready strategy report on LLM options and sustainable data-centre architectures, covering model trade-offs, data governance and deployment constraints.', 'Produced technical documentation for proposed AI solutions, covering architecture decisions and integration considerations.', 'Worked across teams to clarify requirements, ship features and explain trade-offs under time constraints.'])}
-        ${row('Strategy Consultant Intern', 'Jul 2024 – Aug 2024', 'S&amp;G Strategy', 'Montreal, Canada')}
-        ${li(['Researched 40+ transport providers to evaluate the market landscape, pricing models and competitive positioning.', 'Compared leverage and liquidity indicators alongside operating performance to support commercial recommendations.'])}
+        ${row('Research Intern', 'Jun 2025 – Jul 2025', '181st Street Communications', 'London, UK (remote)')}
+        ${li(['Built website prototypes focused on UX and user-journey optimisation.', 'Implemented digital analytics and user-research findings to optimise onboarding flows, improving sign-up conversion by 12% on test pages.', 'Converted qualitative and quantitative insights into clear recommendations and test plans for non-technical stakeholders.'])}
+        ${row('Information Technology Intern', 'Jul 2022 – Aug 2022', 'Ecobank Transnational Incorporated', 'Lomé, Togo')}
+        ${li(['Supported critical banking systems (SWIFT, AML tooling) in a regulated environment, resolving 30+ priority network incidents under strict escalation and audit-trail requirements.', 'Maintained resolution logs and incident documentation to speed up future troubleshooting and meet internal governance standards.'])}
         <h3>Projects</h3>
         ${row('Live DeFi Liquidity Agent', 'Jun 2026', 'Python, Hidden Markov Models, NumPy')}
         ${li(['1st place, TurinTech AI track, UKFinnovator London Hackathon 2026 (Imperial College London); pitched to judges from King’s College London and TurinTech AI.', 'Built an HMM agent in pure NumPy detecting three market regimes in real time to manage concentrated liquidity in a Uniswap V3-style AMM simulation.', 'Rebalanced only when profit exceeded gas cost; outperformed all provided baselines on hidden evaluation seeds.'])}
