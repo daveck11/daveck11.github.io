@@ -17,8 +17,8 @@
       name: 'Agenclave',
       mono: 'Ag', color: '#4b5bd6', tint: 't-agen',
       tag: 'Trust layer for multi-agent coding',
-      when: '2026',
-      stack: 'Python, FastAPI, React, BlackBox AI API',
+      when: 'Jul 2026',
+      stack: 'Python, FastAPI, React, scikit-learn, Docker',
       result: '0.675 macro-F1 bug triage',
       short: 'Four AI models write a fix for the same bug. Agenclave runs every patch in a sandbox and tells you which one to trust.',
       card: { type: 'img', src: 'agenclave-loop.png', alt: 'Agenclave trust loop diagram', dark: true },
@@ -129,15 +129,15 @@
       text: "Shipped 10+ admin analytics features into a React back-office system so the team could see what was going on and make faster calls. Also wrote a CEO-ready report on which LLMs to use and how to think about sustainable data-centre setups, written for people who aren't technical." },
     { mono: '181', color: '#3b4252', title: 'Research Intern', co: '181st Street Communications', place: 'London (remote)', when: 'Jun 2025 – Jul 2025',
       text: 'Built website prototypes around the user journey, then set up the analytics to see where people actually dropped off. The changes we tested lifted sign-up conversion by 12% on the test pages. I also turned the research into plain recommendations and test plans for people who are not technical.' },
-    { logo: 'ecobank.png', mono: 'E', color: '#005f8f', title: 'IT Intern', co: 'Ecobank Transnational Inc.', place: 'Lomé, Togo', when: 'Jul 2022 – Aug 2022',
+    { logo: 'ecobank.png', mono: 'E', color: '#005f8f', title: 'IT Intern', co: 'Ecobank Transnational Inc.', place: 'Lomé, Togo', when: 'Jun 2022 – Aug 2022',
       text: 'My first look at tech inside a bank. I supported the SWIFT payment systems and the anti-money-laundering tools, and fixed 30+ priority network incidents while following strict escalation and audit rules. Learned quickly how much logging and sign-off sits behind every change in a regulated place.' }
   ];
 
   const SKILLS = [
     { title: 'Languages', items: [['Python', '#3776ab'], ['SQL', '#d97706'], ['JavaScript', '#e5b800'], ['HTML/CSS', '#e4572e'], ['English · native', '#94a3b8'], ['French · working', '#94a3b8']] },
     { title: 'Frameworks & Libraries', items: [['React', '#38bdf8'], ['FastAPI', '#059669'], ['Pandas', '#4b3ba8'], ['NumPy', '#4d77cf'], ['scikit-learn', '#f7931e']] },
-    { title: 'Cloud & Tools', items: [['AWS', '#ff9900'], ['EKS / Kubernetes', '#326ce5'], ['ElastiCache (Redis)', '#dc382d'], ['Git & GitHub', '#6e5494'], ['Vercel', '#111318'], ['REST APIs', '#64748b'], ['Excel modelling', '#1d7044'], ['PowerPoint', '#c43e1c'], ['Figma', '#a259ff'], ['Canva', '#00c4cc']] },
-    { title: 'AI & Modelling', items: [['Claude API', '#d97757'], ['OpenAI API', '#10a37f'], ['LLM agents', '#6366f1'], ['Prompt engineering', '#8b5cf6'], ['Hidden Markov Models', '#0f766e'], ['Random Forest', '#15803d'], ['K-Means', '#b45309'], ['Thompson sampling', '#4b5bd6']] }
+    { title: 'Cloud & Tools', items: [['AWS', '#ff9900'], ['EKS / Kubernetes', '#326ce5'], ['ElastiCache (Redis)', '#dc382d'], ['Docker', '#2496ed'], ['PostgreSQL', '#336791'], ['Git & GitHub', '#6e5494'], ['Vercel', '#111318'], ['REST APIs', '#64748b'], ['Excel modelling', '#1d7044'], ['PowerPoint', '#c43e1c'], ['Figma', '#a259ff'], ['Canva', '#00c4cc']] },
+    { title: 'AI & Modelling', items: [['Claude API', '#d97757'], ['OpenAI API', '#10a37f'], ['LLM agents', '#6366f1'], ['RAG', '#0ea5e9'], ['Prompt engineering', '#8b5cf6'], ['Hidden Markov Models', '#0f766e'], ['Random Forest', '#15803d'], ['K-Means', '#b45309'], ['Thompson sampling', '#4b5bd6']] }
   ];
 
   /* ------------------------------------------------------------------ */
@@ -322,9 +322,10 @@
               <p class="deg">BSc (Hons) Computer Science, First-Class Honours</p>
               <p class="when">Sep 2023 – Jun 2026</p>
               <ul>
-                <li>Modules: Big Data and Predictive Analytics, Data Analytics, Databases and Domain Modelling, Intro to Cloud Computing.</li>
+                <li>Modules: Big Data and Predictive Analytics, Data Analytics, Databases and Domain Modelling, Computers, Society and Professionalism.</li>
                 <li>Citizens of Change 100 Scholarship (2023).</li>
-                <li>Course rep for 200+ students in the School of Computing &amp; Mathematics.</li>
+                <li>Course rep for 200 students in the School of Computing &amp; Mathematics.</li>
+                <li>Microsoft Certified: Azure AI Apps and Agents Developer Associate (Oct 2026).</li>
               </ul>
             </div>
             <div class="edu-item small">
@@ -430,34 +431,48 @@
       </div>
       <div class="paper-wrap"><div class="paper">
         <h2>David Nkpa</h2>
-        <p class="contact">+44 7442 831978 | <a href="mailto:${EMAIL}">${EMAIL}</a> | <a href="${LINKEDIN}" target="_blank" rel="noopener">LinkedIn</a> | <a href="${GITHUB}" target="_blank" rel="noopener">GitHub</a> | London, UK</p>
+        <p class="contact">+44 7442 831978 | <a href="mailto:${EMAIL}">${EMAIL}</a> | <a href="https://daveck11.github.io" target="_blank" rel="noopener">daveck11.github.io</a> | <a href="${LINKEDIN}" target="_blank" rel="noopener">LinkedIn</a> | <a href="${GITHUB}" target="_blank" rel="noopener">GitHub</a> | London, UK</p>
         <h3>Profile</h3>
-        <p>Computer Science graduate (First-Class Honours) with hands-on experience building, analysing and pitching AI-enabled solutions across regulated and fast-moving environments. Strong technical foundations, structured thinking and clear communication with non-technical people.</p>
+        <p>Computer Science graduate (First-Class Honours, University of Leicester, 2026) who builds where AI, finance and data meet. Won 1st place at the UKFinnovator London Hackathon 2026 with a market-regime agent, built a cost model and executive deck with Rolls-Royce, and shipped analytics features at a London fintech. I care most about outputs people can check before they rely on them.</p>
         <h3>Work Experience</h3>
         ${row('Finance Analyst', 'Apr 2026 – Jun 2026', 'Rolls-Royce', 'London, UK')}
-        ${li(['Consolidated a 12-month cost dataset, combining 6 months of actuals and forecasts into clean analysis for management review.', 'Built an Excel model calculating monthly % variances, cumulative spend movement, run-rate trends and forecast accuracy across departmental cost lines.', 'Converted the analysis into a 5-slide executive deck with charts and plain-language commentary supporting 3 recommended actions.'])}
+        ${li(['Consolidated a 12-month cost dataset (6 months of actuals and 6 of forecasts) into clean analysis for management review.', 'Built an Excel model calculating monthly % variances, cumulative spend movement, run-rate trends and forecast accuracy across departmental cost lines.', 'Turned the analysis into a 5-slide executive deck, with charts and plain-language commentary supporting 3 recommended actions.'])}
         ${row('Software Engineering Intern', 'Sep 2025 – Oct 2025', 'Boom Technologies (Fintech)', 'London, UK')}
-        ${li(['Built 10+ admin analytics features in a React back-office system, improving operational data visibility and enabling faster decisions.', 'Authored a CEO-ready strategy report on LLM options and sustainable data-centre architectures, covering model trade-offs, data governance and deployment constraints.', 'Produced technical documentation for proposed AI solutions, covering architecture decisions and integration considerations.', 'Worked across teams to clarify requirements, ship features and explain trade-offs under time constraints.'])}
+        ${li(['Built 10+ admin analytics features in a React back-office system, giving the team clearer operational data and faster decisions.', 'Wrote an approved CEO-ready strategy report on LLM options and sustainable data-centre architectures, covering model trade-offs, data governance and deployment constraints for non-technical leadership.', 'Documented proposed AI solutions and worked across teams to clarify requirements and ship features to deadline.'])}
         ${row('Research Intern', 'Jun 2025 – Jul 2025', '181st Street Communications', 'London, UK (remote)')}
-        ${li(['Built website prototypes focused on UX and user-journey optimisation.', 'Implemented digital analytics and user-research findings to optimise onboarding flows, improving sign-up conversion by 12% on test pages.', 'Converted qualitative and quantitative insights into clear recommendations and test plans for non-technical stakeholders.'])}
-        ${row('Information Technology Intern', 'Jul 2022 – Aug 2022', 'Ecobank Transnational Incorporated', 'Lomé, Togo')}
-        ${li(['Supported critical banking systems (SWIFT, AML tooling) in a regulated environment, resolving 30+ priority network incidents under strict escalation and audit-trail requirements.', 'Maintained resolution logs and incident documentation to speed up future troubleshooting and meet internal governance standards.'])}
+        ${li(['Built website prototypes around the user journey and applied digital analytics and user research to onboarding flows, lifting sign-up conversion by 12% on test pages.', 'Turned qualitative and quantitative findings into clear recommendations and test plans for non-technical stakeholders.'])}
+        ${row('Strategy Consultant Intern', 'Jun 2024 – Aug 2024', 'S&amp;G Strategy', 'Montreal, Canada (remote)')}
+        ${li(['Researched 40+ transport providers to assess the market, pricing models and competitive position, comparing leverage and liquidity indicators with operating performance.', 'Condensed 350+ pages of material into a client-ready 50-slide presentation and presented recommendations to senior consultants.'])}
+        ${row('Information Technology Intern', 'Jun 2022 – Aug 2022', 'Ecobank Transnational Incorporated', 'Lomé, Togo')}
+        ${li(['Supported critical banking systems (SWIFT, AML tooling) in a regulated environment, resolving 30+ priority network incidents under strict escalation and audit-trail requirements.', 'Traced failures through logs across network and infrastructure layers and documented fixes for reuse.'])}
         <h3>Projects</h3>
+        ${row('Agenclave: Verification-Backed Trust Layer for Multi-Agent Coding', 'Jul 2026', 'Python, FastAPI, React, scikit-learn, NumPy, Docker')}
+        ${li(['Built and shipped an MVP that runs each AI-generated code patch instead of only reading it, ranking candidates as trusted, applies-but-fails or broken with a plain-English reason; reviewed by a BLACKBOXAI co-founder.', 'Trained a triage classifier (TF-IDF + logistic regression) reaching 0.675 macro-F1 on 1,793 held-out issues; kept it after measuring that it beat a heavier transformer-embedding approach.', 'Built a Thompson-sampling router that learns each model’s reliability from verified runs only.'])}
         ${row('Live DeFi Liquidity Agent', 'Jun 2026', 'Python, Hidden Markov Models, NumPy')}
-        ${li(['1st place, TurinTech AI track, UKFinnovator London Hackathon 2026 (Imperial College London); pitched to judges from King’s College London and TurinTech AI.', 'Built an HMM agent in pure NumPy detecting three market regimes in real time to manage concentrated liquidity in a Uniswap V3-style AMM simulation.', 'Rebalanced only when profit exceeded gas cost; outperformed all provided baselines on hidden evaluation seeds.'])}
-        ${row('AI Financial Decision Assistant (Final-Year Project)', 'Sep 2025 – May 2026', 'Python, FastAPI, LLMs')}
-        ${li(['Full-stack web app for retail investors to analyse US stocks using volatility, drawdown and risk/return metrics.', 'Python/FastAPI analytics service ingesting market data and computing indicators with Pandas/NumPy.', 'Agentic LLM layer (Claude and OpenAI) generating grounded, plain-language stock comparisons.'])}
+        ${li(['Won 1st place at UKFinnovator London Hackathon 2026, Imperial College London; pitched to judges and challenge setters from King’s College London and TurinTech AI.', 'Built a Hidden Markov Model agent in pure NumPy that detects three market regimes in real time to manage concentrated liquidity in a Uniswap V3-style AMM simulation.', 'Rebalanced only when expected profit beat the gas cost; outperformed all provided baselines on hidden evaluation seeds.'])}
+        ${row('AI Financial Decision Assistant (Final-Year Project)', 'Sep 2025 – May 2026', 'Python, FastAPI, React, PostgreSQL, RAG, LLMs')}
+        ${li(['Full-stack web app that helps retail investors read US stocks through volatility, drawdown and risk/return.', 'Built a Python/FastAPI service that ingests Twelve Data market data and computes indicators with Pandas/NumPy across a 55-stock universe grouped into four K-Means risk clusters.', 'Cut LLM hallucination by grounding every explanation in two-stage retrieval (risk band, then stock cluster), with hard rules against buy/sell calls and predictions.'])}
         ${row('Metropolitan Police Crime Prediction Model', 'Mar 2026', 'Python, Pandas, scikit-learn, Random Forest, K-Means, MapReduce')}
-        ${li(['Pipeline on 1.1M+ crime records aggregated into 56,571 neighbourhood-month rows.', 'Lagged counts, crime-type ratios and Shannon entropy features with leakage checks and time-based splits.', 'Random Forest reached 0.934 test R²; previous-month crime count was the strongest predictor.'])}
-        ${row('Private Cloud on AWS', 'Nov 2025 – Dec 2025', 'AWS, EKS, Kubernetes')}
-        ${li(['Fault-tolerant EKS architecture with horizontal scaling and self-healing workloads.', 'Network isolation with VPCs, public/private subnets and NAT gateways.', 'Shared state on ElastiCache (Redis), consistency-first under network partitions.'])}
+        ${li(['Built a pipeline that cleans 1.1M+ Metropolitan Police crime records and aggregates them into 56,571 neighbourhood-month rows.', 'Engineered lagged counts, crime-type ratios and Shannon entropy features, with leakage checks and time-based splits.', 'Reached 0.934 test R² with Random Forest; previous-month crime count was the strongest predictor.'])}
+        ${row('Private Cloud Architecture on AWS', 'Nov 2025 – Dec 2025', 'AWS, EKS, Kubernetes, ElastiCache (Redis), VPC')}
+        ${li(['Designed a fault-tolerant EKS architecture with horizontal scaling and self-healing workloads, isolated with VPCs, public/private subnets and NAT gateways.', 'Ran shared state on ElastiCache (Redis), consistency-first under network partitions after reasoning through the CAP trade-offs.'])}
         <h3>Education</h3>
         ${row('University of Leicester', 'Leicester, UK', 'BSc Computer Science, First-Class Honours', 'Sep 2023 – Jun 2026')}
-        ${li(['Citizens of Change 100 Scholarship (2023).', 'Course Representative for 200+ students, School of Computing &amp; Mathematics.'])}
-        ${row('The British School of Lomé', 'Lomé, Togo', 'IGCSE: 7 A* and 1 A, including Maths, ICT and Physics', 'Aug 2017 – Jun 2021')}
-        ${li(['Duke of Edinburgh (Bronze) Award.'])}
-        <h3>Skills &amp; Languages</h3>
-        ${li(['<b>Technical:</b> Python (Pandas/NumPy), React, SQL, HTML/CSS, REST APIs, AWS', '<b>AI:</b> LLMs, agents, prompt engineering, Claude and OpenAI APIs', '<b>Business:</b> Excel modelling, PowerPoint, Figma, Canva', '<b>Languages:</b> English (native), French (working)'])}
+        ${li(['Citizens of Change 100 Scholarship (2023).', '<b>Relevant modules:</b> Big Data and Predictive Analytics; Data Analytics; Databases and Domain Modelling; Computers, Society and Professionalism.'])}
+        ${row('The British School of Lomé', 'Lomé, Togo', 'IGCSE (8 subjects: 7 A* and 1 A, including Maths, ICT and Physics)', 'Aug 2017 – Jun 2021')}
+        <h3>Certifications</h3>
+        ${li(['<b>Microsoft Certified: Azure AI Apps and Agents Developer Associate</b> (Exam AI-103) – Oct 2026.'])}
+        <h3>Skills</h3>
+        ${li(['<b>Languages &amp; frameworks:</b> Python (Pandas, NumPy, scikit-learn), SQL, JavaScript, React, FastAPI, HTML/CSS, REST APIs', '<b>AI &amp; modelling:</b> LLMs, RAG, agents, prompt engineering, Claude and OpenAI APIs, Hidden Markov Models, Random Forest, K-Means', '<b>Cloud, tools &amp; business:</b> AWS (EKS, VPC, ElastiCache), Kubernetes, Docker, Git, PostgreSQL, Excel modelling, PowerPoint, Figma'])}
+        <h3>Leadership &amp; Extra-Curriculars</h3>
+        ${row('McKinsey.org Forward Program', 'Oct 2026 – Present', 'McKinsey &amp; Company (online)', 'London, UK')}
+        ${li(['Structuring ambiguous business problems and turning analysis into clear recommendations.'])}
+        ${row('Course Representative', 'Oct 2025 – Jul 2026', 'School of Computing &amp; Mathematics, University of Leicester', 'Leicester, UK')}
+        ${li(['Represented 200 students in departmental meetings; raised issues with staff and reported outcomes back.'])}
+        ${row('Retail Volunteer', 'Sep 2025 – Mar 2026', 'British Heart Foundation', 'Leicester, UK')}
+        ${li(['Served customers, processed donations and handled day-to-day queries.'])}
+        <h3>Languages</h3>
+        ${li(['<b>English:</b> Native', '<b>French:</b> Working Proficiency'])}
       </div></div>
     </div>`;
   }
