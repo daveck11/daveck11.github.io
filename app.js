@@ -248,7 +248,7 @@
       <section class="wrap hero">
         <div class="hero-lines">
           <h1 class="big">David <span>studied</span> Computer Science <span>@</span> Leicester</h1>
-          <p class="sub">Graduated with <b>First-Class Honours</b>, 2026.<br>Previously @ <b>Rolls-Royce</b> and <b>Boom Technologies</b>.<br>Now looking for a new-grad role where I actually get to build.</p>
+          <p class="sub">Graduated with <b>First-Class Honours</b>, 2026.<br>Previously with <b>Rolls-Royce</b> and <b>Boom Technologies</b>.<br>Now looking for a new-grad role where I actually get to build.</p>
           <div class="hero-cta"><a class="btn-dark" href="#projects">See my work</a><a class="btn-light" href="#resume">Resume</a></div>
         </div>
         <div class="photo-pile" id="pile">
@@ -307,7 +307,7 @@
           <h1><span class="g">I'm a CompSci</span> Graduate, Builder, <span class="g">and</span> Analyst <span class="g">based in</span> London.</h1>
           <div class="intro-copy">
             <p>I like building things I wish already existed, usually somewhere between <b>AI, finance and data</b>. Sometimes that's a hackathon agent that manages liquidity on its own. Sometimes it's a tool that tells you which AI-written fix to trust.</p>
-            <p>I've also sat on the business side. At Rolls-Royce I turned a messy year of cost data into a 5-slide deck management could act on, and at Boom I shipped analytics features and wrote the LLM report for the CEO. So I care a lot about whether the person on the other end can actually read what I build.</p>
+            <p>I've also sat on the business side. With Rolls-Royce I turned a messy year of cost data into a 5-slide deck management could act on, and at Boom I shipped analytics features and wrote the LLM report for the CEO. So I care a lot about whether the person on the other end can actually read what I build.</p>
             <p>Just finished my BSc at Leicester with a First. Now looking for a <b>new-grad role where I actually get to build</b>. If that sounds like your team, just email me.</p>
           </div>
         </div>
